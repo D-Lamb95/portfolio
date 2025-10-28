@@ -124,15 +124,3 @@ My academic work in Data Science focuses on renewable energy forecasting, enviro
       dateRange: "2013 - 2017",
       ],
     },
-    {
-      school: "Online Platform",
-      degree: "Full Stack Development Certificate",
-      dateRange: "2019",
-      achievements: [
-        "Completed 500+ hours of coursework",
-        "Built 10+ portfolio projects",
-        "Specialized in React and Node.js",
-      ],
-    },
-  ],
-};
