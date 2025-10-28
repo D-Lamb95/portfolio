@@ -1,19 +1,26 @@
 ---
-import Header from "../components/Header.astro";
-import Hero from "../components/Hero.astro";
+import Header from "../components/Header.astro";   // if you actually have this component
+import Hero from "../components/Hero.astro";       // if you actually have this component
 import About from "../components/About.astro";
 import Projects from "../components/Projects.astro";
 import Experience from "../components/Experience.astro";
 import Education from "../components/Education.astro";
 import Footer from "../components/Footer.astro";
-import { siteConfig } from "../config";
+
+// If your config exports default:
+import siteConfig from "../config";
+
+// If your config exports a *named* constant instead, use:
+// import { siteConfig } from "../config";
+
 import "../styles/global.css";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Use a relative path so it works at /portfolio/ on GitHub Pages -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={siteConfig.description} />
@@ -26,6 +33,7 @@ import "../styles/global.css";
     <title>{siteConfig.name} - {siteConfig.title}</title>
   </head>
   <body>
+    <!-- If you don't actually have Header/Hero yet, remove these two lines -->
     <Header />
     <section>
       <Hero />
