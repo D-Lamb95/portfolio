@@ -8,7 +8,7 @@ on:
 permissions:
   contents: read
   pages: write
-  id-token: write   # ✅ Missing in your version
+  id-token: write
 
 jobs:
   build:
@@ -25,7 +25,10 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
+      # ✅ dynamic URL from the deploy step:
       url: ${{ steps.deployment.outputs.page_url }}
+      # If you ever want a static string instead, DO NOT use ${{ }}:
+      # url: 'https://d-lamb95.github.io/portfolio/'
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
